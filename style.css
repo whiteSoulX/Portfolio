@@ -117,15 +117,18 @@ a:hover{
  }
 
  .humburger-icon.open  span:first-child{
-     transform:rotate(45deg) translate(10px.5px);
+     transform:rotate(45deg) translate(10px,5px);
  }
  .humburger-icon.open  span:nth-child(2){
      opacity: 0;
  }
  .humburger-icon.open  span:last-child{
-     transform:rotate(-45deg) translate(10px-5px);
+     transform:rotate(-45deg) translate(10px,-5px);
  }
 
+ .humburger-icon span:first-child{
+    transform: none;
+ }
  .humburger-icon span:first-child{
     opacity: 1;
  }
