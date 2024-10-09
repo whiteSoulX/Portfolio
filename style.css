@@ -243,4 +243,88 @@ btn-color-1,btn-color-2:hover{
 .btn-container{
     gap: 1rem;
 }
+ 
+/* About Section */
+
+#about {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section_text_p1 {
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.section_pic-container {
+    height: 300px;
+    width: 300px;
+}
+
+.about-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 0; 
+    object-fit: cover;
+}
+
+.about-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-containers {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid rgb(163, 163, 163);
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-container img.icon {
+    width: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.text-container {
+    max-width: 600px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 2rem;  /* Adjust the distance from the bottom */
+    right: 2rem;   /* Adjust the distance from the right */
+    cursor: pointer;
+    width: 40px;
+}
 
