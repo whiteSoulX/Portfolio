@@ -285,12 +285,14 @@
                     class="icon contact-icon"/>
                     <p><a href="https://www.linkedin.com/in/prisom/">Linkedin</a></p>
                 </div>
-                <div class="contact-info-container">
-                    <img src="./assets/wp.jpg" alt="Wp"
-                    class="icon contact-icon"/>
-                    <p>Whatsapp (+880 1601-031910)</a></p>
+                <div class="contact-info-container" onclick="handleWhatsAppClick()">
+                    <img src="./assets/wp.jpg" alt="Wp" class="icon contact-icon"/>
+                    <p>Whatsapp (+880 1601-031910)</p>
                 </div>
-            </div>
+
+                <p id="copyMsg" style="color: green; display: none; margin-top:5px;">
+                    Number copied & WhatsApp opened</p>
+                </div>
         </div>
     </section>
     <footer>
@@ -308,5 +310,24 @@
     </footer>
     
     <script src="script.js"></script>
+            <script>
+        function handleWhatsAppClick() {
+            const number = "8801601031910"; // no +, no spaces
+            const url = "https://wa.me/" + number;
+
+            // ✅ Copy to clipboard
+            navigator.clipboard.writeText("+" + number).catch(() => {});
+
+            // ✅ Open WhatsApp (works for iPhone, Android, Desktop)
+            window.open(url, "_blank");
+
+            // ✅ Show message
+            const msg = document.getElementById("copyMsg");
+            msg.style.display = "block";
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 2000);
+        }
+        </script>
 </body>
 </html>
