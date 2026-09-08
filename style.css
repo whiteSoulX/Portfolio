@@ -600,6 +600,22 @@ footer b { color: var(--text); }
 .projects-track:not(.mode-3d) .project-card.reveal { transform: perspective(900px) rotateX(10deg) translateY(40px); }
 .projects-track:not(.mode-3d) .project-card.reveal.in { transform: none; }
 
+/* Hero content plays a pure-CSS entrance instead of the JS/IntersectionObserver-driven
+   .reveal above: it's the first thing on the page, already in view with nothing to scroll
+   to, so waiting on JS to run before showing it just produced a blank flash on load
+   (worse on slower mobile connections/CPUs). This starts the instant the stylesheet
+   applies, with no dependency on script execution timing. */
+@keyframes heroFadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+.hero-reveal { animation: heroFadeUp .7s var(--ease) both; }
+.hero-tag.hero-reveal      { animation-delay: .02s; }
+.hero-name.hero-reveal     { animation-delay: .08s; }
+.hero-role.hero-reveal     { animation-delay: .16s; }
+.hero-desc.hero-reveal     { animation-delay: .22s; }
+.hero-visual.hero-reveal   { animation-delay: .1s; }
+.hero-btns.hero-reveal     { animation-delay: .3s; }
+.hero-stats.hero-reveal    { animation-delay: .36s; }
+.hero-socials.hero-reveal  { animation-delay: .42s; }
+
 /* ── RESPONSIVE ──────────────────────────────────────────────────── */
 @media (max-width: 1080px) {
   .skills-grid { grid-template-columns: repeat(2,1fr); }
@@ -652,5 +668,6 @@ footer b { color: var(--text); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
+  .hero-reveal { animation: none; opacity: 1; transform: none; }   /* skip the delay too, not just the duration */
   .hero-tilt { transform: none !important; }
 }
