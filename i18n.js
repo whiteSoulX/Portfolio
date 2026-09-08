@@ -57,6 +57,7 @@ window.I18N = {
     "projects.viewLive": "View live ↗",
     "projects.viewCode": "View code ↗",
     "projects.capstone": "Capstone",
+    "projects.snake": "Python Snake",
     "projects.github": "See more on GitHub ↗",
 
     "proj.brightsmile": "AI-assisted dental studio — book an appointment in under a minute, then a real person confirms.",
@@ -68,6 +69,7 @@ window.I18N = {
     "proj.novasoft": "Landing site for a student-led agency offering websites, software and AI solutions.",
     "proj.tracker": "A members-only workspace where every project, task and tracked hour lives in one place.",
     "proj.blockexdse": "Blockchain-driven stock exchange with hybrid DPoS/PBFT consensus, MEV protection and off-chain storage.",
+    "proj.snake": "A Python-based snake creature that looks awesome as it follows your cursor around the screen.",
 
     "certs.label": "Credentials",
     "certs.title": "Certificates",
@@ -159,6 +161,7 @@ window.I18N = {
     "projects.viewLive": "লাইভ দেখুন ↗",
     "projects.viewCode": "কোড দেখুন ↗",
     "projects.capstone": "ক্যাপস্টোন",
+    "projects.snake": "পাইথন স্নেক",
     "projects.github": "গিটহাবে আরও দেখুন ↗",
 
     "proj.brightsmile": "এআই-সহায়ক ডেন্টাল স্টুডিও — এক মিনিটেরও কম সময়ে অ্যাপয়েন্টমেন্ট বুক করুন, এরপর একজন প্রকৃত ব্যক্তি তা নিশ্চিত করেন।",
@@ -170,6 +173,7 @@ window.I18N = {
     "proj.novasoft": "একটি শিক্ষার্থী-পরিচালিত এজেন্সির ল্যান্ডিং সাইট, যারা ওয়েবসাইট, সফটওয়্যার ও এআই সলিউশন দেয়।",
     "proj.tracker": "মেম্বারদের জন্য একটি ওয়ার্কস্পেস, যেখানে প্রতিটি প্রজেক্ট, টাস্ক ও ট্র্যাক করা ঘণ্টা এক জায়গায় থাকে।",
     "proj.blockexdse": "ব্লকচেইন-ভিত্তিক স্টক এক্সচেঞ্জ — হাইব্রিড DPoS/PBFT কনসেনসাস, MEV সুরক্ষা এবং অফ-চেইন স্টোরেজসহ।",
+    "proj.snake": "একটি পাইথন-ভিত্তিক স্নেক ক্রিয়েচার, যা কার্সার নড়াচড়া করলে দুর্দান্তভাবে অনুসরণ করে।",
 
     "certs.label": "সনদপত্র",
     "certs.title": "সার্টিফিকেট",
