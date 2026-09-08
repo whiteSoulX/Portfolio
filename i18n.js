@@ -8,6 +8,7 @@ window.I18N = {
     "nav.certificates": "Certificates",
     "nav.contact": "Contact",
     "nav.cv": "Download CV",
+    "nav.cvView": "View CV ↗",
 
     "hero.badge": "Available for opportunities",
     "hero.role": "CSE Final Year · Full-Stack Developer · Cybersecurity Enthusiast",
@@ -39,6 +40,7 @@ window.I18N = {
     "about.card.video.t": "Video Editing",
     "about.card.video.d": "3+ years · Premiere Pro & After Effects",
     "about.cv": "Download CV",
+    "about.cvView": "View CV ↗",
 
     "skills.label": "What I work with",
     "skills.title": "Skills & Technologies",
@@ -112,6 +114,7 @@ window.I18N = {
     "nav.certificates": "সার্টিফিকেট",
     "nav.contact": "যোগাযোগ",
     "nav.cv": "সিভি ডাউনলোড",
+    "nav.cvView": "সিভি দেখুন ↗",
 
     "hero.badge": "কাজের সুযোগের জন্য উন্মুক্ত",
     "hero.role": "সিএসই শেষ বর্ষ · ফুল-স্ট্যাক ডেভেলপার · সাইবার সিকিউরিটি উৎসাহী",
@@ -143,6 +146,7 @@ window.I18N = {
     "about.card.video.t": "ভিডিও এডিটিং",
     "about.card.video.d": "৩+ বছর · Premiere Pro ও After Effects",
     "about.cv": "সিভি ডাউনলোড",
+    "about.cvView": "সিভি দেখুন ↗",
 
     "skills.label": "যেসব প্রযুক্তি নিয়ে কাজ করি",
     "skills.title": "দক্ষতা ও প্রযুক্তি",

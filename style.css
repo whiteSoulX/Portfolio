@@ -68,6 +68,7 @@ body {
   font-size: 16px;
   line-height: 1.65;
   overflow-x: hidden;
+  word-wrap: break-word; overflow-wrap: break-word;   /* stop long words (any language) from blowing out narrow phones */
   transition: background .4s var(--ease), color .4s var(--ease);
 }
 
@@ -178,6 +179,7 @@ section { padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem); position:
 .nav-logo span { color: var(--accent); }
 
 .nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-cv-mobile { display: none; }   /* the nav-cta button covers desktop; shown in the mobile menu below 900px */
 .nav-links a {
   position: relative; color: var(--muted); font-size: .82rem; font-weight: 600;
   letter-spacing: .04em; text-transform: uppercase; transition: color .2s;
@@ -384,7 +386,7 @@ section { padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem); position:
 .about-card-icon { font-size: 1.5rem; margin-bottom: .5rem; }
 .about-card h4 { font-family: var(--font-head); font-size: .96rem; font-weight: 700; margin-bottom: .2rem; }
 .about-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.55; }
-.about-cv { margin-top: .4rem; }
+.about-cv-group { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .4rem; }
 
 /* ── SKILLS ──────────────────────────────────────────────────────── */
 .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
@@ -614,6 +616,8 @@ footer b { color: var(--text); }
   .nav-links.open { transform: translateY(0); }
   .nav-links li { width: 100%; }
   .nav-links a { display: block; padding: .9rem 0; border-bottom: 1px solid var(--border); font-size: .95rem; }
+  .nav-cv-mobile { display: block; }
+  .nav-cv-mobile a { color: var(--accent); font-weight: 700; }
   .hamburger { display: flex; }
   .nav-cta { display: none; }
 
