@@ -303,7 +303,7 @@ section { padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem); position:
   position: relative; width: min(380px, 78vw); aspect-ratio: 1;
   transform-style: preserve-3d;
   transform: rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
-  transition: transform .3s var(--ease);
+  /* smoothing is done per-frame in JS (script.js) — a CSS transition here would fight it and lag */
 }
 .hero-tilt > * { position: absolute; }
 .hero-orb {

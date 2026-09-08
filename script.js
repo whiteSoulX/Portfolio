@@ -185,20 +185,52 @@
     document.addEventListener('mouseenter', function () { dot.style.opacity = ''; ring.style.opacity = ''; });
   }
 
-  /* ── hero 3D tilt ──────────────────────────────────────────────── */
+  /* ── hero 3D tilt ──────────────────────────────────────────────────
+     A gentle idle drift animates the photo in 3D on every device — the
+     old version only responded to mouse movement, so anyone on a phone
+     or tablet never saw any 3D motion at all. On a fine pointer, real
+     cursor position takes over from the drift while the mouse is over
+     the hero; touch devices keep the idle drift, since there's no
+     hover to take over from. Fully disabled under prefers-reduced-motion
+     (a global CSS rule already forces the tilt to a flat transform for
+     those users; skipping the loop here just saves the battery/CPU). */
   var hero = $('#hero'), heroTilt = $('#heroTilt');
-  if (hero && heroTilt && finePointer && !reduceMotion) {
-    hero.addEventListener('mousemove', function (e) {
-      var r = hero.getBoundingClientRect();
-      var px = (e.clientX - r.left) / r.width - 0.5;
-      var py = (e.clientY - r.top) / r.height - 0.5;
-      heroTilt.style.setProperty('--rx', (px * 16).toFixed(2) + 'deg');
-      heroTilt.style.setProperty('--ry', (-py * 16).toFixed(2) + 'deg');
-    });
-    hero.addEventListener('mouseleave', function () {
-      heroTilt.style.setProperty('--rx', '0deg');
-      heroTilt.style.setProperty('--ry', '0deg');
-    });
+  if (hero && heroTilt && !reduceMotion) {
+    var tiltRX = 0, tiltRY = 0, tiltTX = 0, tiltTY = 0, tiltIdle = true;
+    var tiltRAF = null, tiltVisible = true;
+
+    function tiltFrame(t) {
+      if (tiltIdle) {
+        tiltTX = Math.sin(t / 2600) * 9;
+        tiltTY = Math.cos(t / 3300) * 7;
+      }
+      tiltRX += (tiltTX - tiltRX) * 0.05;
+      tiltRY += (tiltTY - tiltRY) * 0.05;
+      heroTilt.style.setProperty('--rx', tiltRX.toFixed(2) + 'deg');
+      heroTilt.style.setProperty('--ry', tiltRY.toFixed(2) + 'deg');
+      if (tiltVisible) tiltRAF = requestAnimationFrame(tiltFrame);
+    }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        tiltVisible = entries[0].isIntersecting;
+        if (tiltVisible && tiltRAF === null) tiltRAF = requestAnimationFrame(tiltFrame);
+      }, { threshold: 0.05 }).observe(hero);
+    } else {
+      tiltRAF = requestAnimationFrame(tiltFrame);
+    }
+
+    if (finePointer) {
+      hero.addEventListener('mousemove', function (e) {
+        tiltIdle = false;
+        var r = hero.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        tiltTX = px * 16;
+        tiltTY = -py * 16;
+      });
+      hero.addEventListener('mouseleave', function () { tiltIdle = true; });
+    }
   }
 
   /* ── generic hover tilt [data-tilt] ────────────────────────────── */
