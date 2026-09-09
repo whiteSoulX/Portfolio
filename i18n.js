@@ -64,6 +64,7 @@ window.I18N = {
 
     "proj.brightsmile": "AI-assisted dental studio — book an appointment in under a minute, then a real person confirms.",
     "proj.afternoon": "A Dhaka home-style restaurant with online ordering, live order tracking and table reservations.",
+    "proj.luxebook": "An installable salon & spa app — browse treatments, pick a therapist and book an appointment in a few unhurried taps.",
     "proj.taskflow": "Production-ready task manager — Kanban & grid views, JWT auth, Django REST API and PostgreSQL.",
     "proj.syncflow": "Marketing site for an AI platform that turns multi-service tasks and CI/CD into natural-language commands.",
     "proj.forgegym": "A gym site to handle branches, membership plans and weekly class schedules.",
@@ -170,6 +171,7 @@ window.I18N = {
 
     "proj.brightsmile": "এআই-সহায়ক ডেন্টাল স্টুডিও — এক মিনিটেরও কম সময়ে অ্যাপয়েন্টমেন্ট বুক করুন, এরপর একজন প্রকৃত ব্যক্তি তা নিশ্চিত করেন।",
     "proj.afternoon": "ঢাকার একটি হোম-স্টাইল রেস্টুরেন্ট — অনলাইন অর্ডার, লাইভ অর্ডার ট্র্যাকিং এবং টেবিল রিজার্ভেশন সুবিধা।",
+    "proj.luxebook": "ইনস্টলযোগ্য একটি স্যালন ও স্পা অ্যাপ — ট্রিটমেন্ট দেখুন, থেরাপিস্ট বেছে নিন এবং কয়েকটি সহজ ট্যাপে অ্যাপয়েন্টমেন্ট বুক করুন।",
     "proj.taskflow": "প্রোডাকশন-রেডি টাস্ক ম্যানেজার — কানবান ও গ্রিড ভিউ, JWT অথেনটিকেশন, Django REST API এবং PostgreSQL।",
     "proj.syncflow": "একটি এআই প্ল্যাটফর্মের মার্কেটিং সাইট, যা মাল্টি-সার্ভিস টাস্ক ও CI/CD-কে স্বাভাবিক ভাষার কমান্ডে রূপান্তর করে।",
     "proj.forgegym": "একটি জিম ওয়েবসাইট — ব্রাঞ্চ, মেম্বারশিপ প্ল্যান এবং সাপ্তাহিক ক্লাস শিডিউল পরিচালনার জন্য।",
