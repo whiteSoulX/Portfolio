@@ -73,6 +73,7 @@ window.I18N = {
     "proj.tracker": "A members-only workspace where every project, task and tracked hour lives in one place.",
     "proj.blockexdse": "Blockchain-driven stock exchange with hybrid DPoS/PBFT consensus, MEV protection and off-chain storage.",
     "proj.snake": "A Python-based snake creature that looks awesome as it follows your cursor around the screen.",
+    "proj.dhakaflatfinder": "A rental-listing app for Dhaka's bachelors and students — flats, single rooms and mess seats, searchable by area or map distance, dealing with owners directly.",
 
     "certs.label": "Credentials",
     "certs.title": "Certificates",
@@ -180,6 +181,7 @@ window.I18N = {
     "proj.tracker": "মেম্বারদের জন্য একটি ওয়ার্কস্পেস, যেখানে প্রতিটি প্রজেক্ট, টাস্ক ও ট্র্যাক করা ঘণ্টা এক জায়গায় থাকে।",
     "proj.blockexdse": "ব্লকচেইন-ভিত্তিক স্টক এক্সচেঞ্জ — হাইব্রিড DPoS/PBFT কনসেনসাস, MEV সুরক্ষা এবং অফ-চেইন স্টোরেজসহ।",
     "proj.snake": "একটি পাইথন-ভিত্তিক স্নেক ক্রিয়েচার, যা কার্সার নড়াচড়া করলে দুর্দান্তভাবে অনুসরণ করে।",
+    "proj.dhakaflatfinder": "ঢাকার ব্যাচেলর ও শিক্ষার্থীদের জন্য একটি বাসা ভাড়ার প্ল্যাটফর্ম — ফ্ল্যাট, সিঙ্গেল রুম ও মেস সিট এলাকা বা মানচিত্রে দূরত্ব দেখে খুঁজুন, মধ্যস্বত্বভোগী ছাড়াই সরাসরি বাড়িওয়ালার সাথে যোগাযোগ করুন।",
 
     "certs.label": "সনদপত্র",
     "certs.title": "সার্টিফিকেট",
